@@ -70,8 +70,7 @@ if ($_SESSION) {
         </button>
         <br>
         <a class="signUp" href="signup.php">¿Usuario nuevo? Creá una cuenta</a>
-        <input type="checkbox" name="remember" class="recordar" style="margin:0px 3px 0px 0px">Recordarme
-        <br>
+        <input type="checkbox" name="remember" style="align:center; float: left; margin-top: 5px; margin-right:5px;" padding: 10px 10px 10px 10px>Recordarme
         <a class="recover" href="recover.php">¿Olvidaste tu contraseña?</a>
         <br>
         <br>

@@ -37,7 +37,7 @@ include_once("controllers/funciones.php");
             <a class="nav-link" href="#">Nosotros</a>
           </li>
           <li>
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link" href="">Contacto</a>
           </li>
         </ul>
       </div>
