@@ -27,14 +27,14 @@ if (isset($_SESSION["nombre"])) {
 <meta charset="utf-8">
 <head>
  <?php include_once("head.php");?>
-  
+
   <title>Registro</title>
 </head>
 <body>
   <?php include_once("nav.php");?>
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 offset-4 titulo-login-pao">
+      <div class="col-lg-4 offset-4 titulo-login-pao text-center">
           <h2>REGISTRARME</h2>
       </div>
     </div>

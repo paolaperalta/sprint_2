@@ -7,7 +7,7 @@
   <body>
     <?php  include 'nav.php';
      ?>
-    <div class="container g_100vh">
+    <div class="container">
 
       <div class="row">
         <div class="col-lg-6 offset-3">
@@ -15,14 +15,14 @@
             PREGUNTAS FRECUENTES
           </h1>
         </div>
-          
+
       </div>
-      
+
 
       <div class="row" >
 
         <div class="col-lg-6">
-          
+
           <div class="accordion" id="accordionExample">
 
             <div class="card pregunta">
@@ -163,7 +163,7 @@
 
       </div> <!-- aca cierra row del primer acordeon-->
 
-     
+
       </div> <!-- aca cierra container del primer acordeon-->
 
 

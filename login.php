@@ -42,8 +42,8 @@ if (isset($_SESSION["nombre"])) {
   <body>
     <?php include_once('nav.php');
     ?>
-    <div class="container g_100vh">
-      
+    <div class="container">
+
       <div class="row">
         <div class="col-lg-4 offset-4 titulo-login-pao">
           <h2 class="text-center">INICIAR SESIÓN</h2>
@@ -82,7 +82,7 @@ if (isset($_SESSION["nombre"])) {
               </label>
             </div>
              <a class="recover" href="recover.php">¿Olvidaste tu contraseña?</a>
-          
+
           </form>
         </div>
       </div>

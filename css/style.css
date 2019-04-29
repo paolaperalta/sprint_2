@@ -2106,8 +2106,8 @@ text-align: left;
 }
 
 .titulo-login-pao{
-  margin: 8.3rem auto 3.5rem auto;
- 
+  margin: 6.5rem auto 1rem auto;
+
 }
 
 label {
@@ -2230,10 +2230,14 @@ input {
     letter-spacing: 2px;
     font-family: 'Shadows Into Light', cursive;
     font-size: 5.6rem;
+}
 
-
-
-
+@media only screen and (max-width: 1500px){
+  .g_introText{
+      bottom: 60%;
+      letter-spacing: 2px;
+      font-size: 2.9rem;
+  }
 }
 
 
