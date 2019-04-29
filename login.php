@@ -44,7 +44,7 @@ if (isset($_SESSION["nombre"])) {
     ?>
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 offset-4 titulo-login">
+        <div class="col-lg-4 offset-4 titulo-login-pao">
           <h2>INICIAR SESIÓN</h2>
         </div>
       </div>
@@ -71,7 +71,12 @@ if (isset($_SESSION["nombre"])) {
         </button>
         <br>
         <a class="signUp" href="signup.php">¿Usuario nuevo? Creá una cuenta</a>
-        <input type="checkbox" name="remember" style="align:center; float: left; margin-top: 5px; margin-right:5px;" padding: 10px 10px 10px 10px>Recordarme
+        <div>
+          <label>
+            <input type="checkbox" style="width: 24px;">Recordarme
+          </label>
+        </div>
+        <text-align: center; width: 25px; vertical-align: center;>
         <a class="recover" href="recover.php">¿Olvidaste tu contraseña?</a>
         <br>
         <br>
