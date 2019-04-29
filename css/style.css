@@ -2117,6 +2117,7 @@ label {
   display: block;
   padding-left: 15px;
   text-indent: -15px;
+  text-align: center;
 }
 input {
   width: 13px;
