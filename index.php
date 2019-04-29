@@ -27,6 +27,7 @@ include_once("nav.php");
             <div class="card-box-a ">
               <div class="img-box-a">
                 <img src="img/maceta1.jpg" alt="" class="img-a img-fluid" width="100%">
+
               </div>
               <!--<div class="card-overlay">
                 <div class="card-overlay-a-content">
@@ -49,9 +50,10 @@ include_once("nav.php");
 
         <div class="col-lg-3 p-0">
           <div class="carousel-item-b">
-            <div class="card-box-a">
+            <div class="">
               <div class="img-box-a">
                 <img src="img/maceta2.jpg" alt="" class="img-a img-fluid" width="100%">
+                <h1 class="g_introText text-center">Tienda de Objetos</h1> 
               </div>
             </div>
           </div>
@@ -89,8 +91,15 @@ include_once("nav.php");
   <!--/ Agents Star /-->
   <section class="section-agents section-t4">
     <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 offset-4 text-center mb-4">
+           <h2>NUESTROS PRODUCTOS</h2>
+        </div>
+      </div>
 
       <div class="row mx-sm-5">
+
+       
         <div class="col-md-4 p-0">
           <div class="card-box-d">
             <div class="card-img-d">

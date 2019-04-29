@@ -1356,7 +1356,7 @@ a:hover {
 }
 
 .card-box-d:hover .card-overlay-hover {
-  background-color: #01886a;
+  background-color: #333333;
   opacity: .74;
 }
 
@@ -1524,6 +1524,7 @@ footer {
   background: #f3f3f3;
   text-align: center;
   padding: 30px 0;
+  /*margin-top: 65px;*/
 }
 
 footer .copyright-footer {
@@ -2032,7 +2033,7 @@ footer .credits {
   background-color: #EBEBE9;
 }
 .btn-link:hover {
-  color: #01886A;
+  color: #489E7B;
 }
 
 .card.pregunta > * {
@@ -2056,7 +2057,7 @@ footer .credits {
 
 /*-------- PAO ----------*/
 
-.btn{
+.p_btn{
   width: 100%;
   background-color: #E2D4C9;
 }
@@ -2065,10 +2066,9 @@ footer .credits {
 font-family: 'Lato', sans-serif;
 font-size: 1.2em;
 font-weight: 1;
-color: #01886A;
-padding-top: 2px;
-width: 100%;
-
+color: #489E7B;
+padding-top: 15px;
+text-align: left;
 }
 
 .completar{
@@ -2106,11 +2106,8 @@ width: 100%;
 }
 
 .titulo-login-pao{
-  width: 100%;
-  margin: 7rem auto auto 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin: 8.3rem auto 3.5rem auto;
+ 
 }
 
 label {
@@ -2120,8 +2117,8 @@ label {
   text-align: center;
 }
 input {
-  width: 13px;
-  height: 13px;
+  /*width: 13px;
+  height: 13px;*/
   padding: 0;
   margin:0;
   vertical-align: center;
@@ -2139,7 +2136,7 @@ input {
 @media only screen and (min-width: 600px) {
 
   .etiquetas{
-    padding: 15px 0px 0px 0px;
+    /*padding: 15px 0px 0px 0px;*/
     align-self:flex-start;
     font-size: 1.2em;
   }
@@ -2219,4 +2216,44 @@ input {
 .containerDatos{
   width: 100%;
   text-align: center;
+}
+
+
+.g_100vh{
+  height: 100vh;
+}
+
+.g_introText{
+    color: #fff;
+    position: absolute;
+    bottom: 60%;
+    letter-spacing: 2px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 5.6rem;
+
+
+
+
+}
+
+
+
+.mobile{
+  display: none;
+}
+  .lg-viewport{
+    display: block;
+  }
+
+
+@media only screen and (max-width: 992px){
+
+  .mobile{
+  display: block;
+  }
+
+  .lg-viewport{
+    display: none;
+  }
+
 }

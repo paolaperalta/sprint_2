@@ -2437,7 +2437,7 @@ fieldset:disabled a.btn {
 .btn-info {
   color: #fff;
   background-color: #17a2b8;
-  border-color: #17a2b8;
+  border-color: transparent;
 }
 
 .btn-info:hover {
@@ -4380,6 +4380,7 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin-bottom: 15px;
 }
 
 .card > hr {

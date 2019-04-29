@@ -26,19 +26,23 @@ if (isset($_SESSION["nombre"])) {
 <html lang="es" dir="ltr">
 <meta charset="utf-8">
 <head>
-  <?php include_once("head.php")?>
+ <?php include_once("head.php");?>
+  
   <title>Registro</title>
 </head>
 <body>
-  <?php include_once("nav.php")?>
+  <?php include_once("nav.php");?>
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 offset-4 titulo-login">
+      <div class="col-lg-4 offset-4 titulo-login-pao">
           <h2>REGISTRARME</h2>
       </div>
     </div>
     <!--<section class="section-t4">-->
           <br>
+
+      <div class="row">
+        <div class="col-lg-8 offset-2">
           <form action="" class="" method="POST" enctype="multipart/form-data">
             <?php
             if(isset($errores)):?>
@@ -65,12 +69,14 @@ if (isset($_SESSION["nombre"])) {
             <input class="box" type="file" name="avatar" value="" required>
             <br>
             <br>
-            <button type="submit" class="btn btn-info hsubmit" data-toggle="modal" data-target="#myModal" aria-disabled="true" autocomplete="off">Registrarme</button>
+            <button type="submit" class="p_btn btn btn-info" data-toggle="modal" data-target="#myModal" aria-disabled="true" autocomplete="off">Registrarme</button>
             <a class="signUp" href="login.php">¡Ya tengo una cuenta!</a>
             <br>
             <br>
             <br>
           </form>
+        </div>
+      </div>
       <!--</section>-->
     </div>
     <footer>
