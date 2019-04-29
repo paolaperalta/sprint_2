@@ -44,7 +44,7 @@ include_once("controllers/funciones.php");
     </div>
 
     <?php
-      if ($_SESSION) { ?>
+      if (isset($_SESSION["nombre"])) { ?>
         <a class="login" href="profile.php"><?php echo $_SESSION["email"];?></a><?php echo "&nbsp;&nbsp;|&nbsp;&nbsp;"; ?><a class="login" href="logout.php">Cerrar Sesión</a>
         <?php } else { ?>
         <a class="login" href="login.php">Ingresar</a>

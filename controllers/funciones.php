@@ -75,7 +75,6 @@ function armarAvatar($imagen) {
   return $avatarUsuario;
   }
 
-
 function armarRegistro($datos, $imagen) {
   $usuario = [
     "nombre" => $datos["nombre"],
@@ -86,19 +85,16 @@ function armarRegistro($datos, $imagen) {
   return $usuario;
 }
 
-
 function guardarUsuario($usuario) {
   $jsusuario = json_encode($usuario);
-  file_put_contents('usuarios.json',$jsusuario. PHP_EOL, FILE_APPEND);
+  file_put_contents('usuarios.json', $jsusuario. PHP_EOL, FILE_APPEND);
 }
-
 
 function inputUsuario($campo) {
     if (isset($_POST[$campo])) {
         return $_POST[$campo];
     }
 }
-
 
 function abrirBaseDatos() {
     $baseDatosUsuarios = [];
@@ -111,18 +107,42 @@ function abrirBaseDatos() {
     return $baseDatosUsuarios;
 }
 
-
 function buscarEmail($email) {
     $baseDatosUsuarios = abrirBaseDatos();
     foreach ($baseDatosUsuarios as $usuario) {
         if ($usuario["email"] == $email) {
             return $usuario;
-
         }
     }
     return null;
 }
 
+function buscarNombreEmail($email, $nombre) {
+    $baseDatosUsuarios = abrirBaseDatos();
+    foreach ($baseDatosUsuarios as $usuario) {
+      if ($nombre == $usuario["nombre"] && $email == $usuario["email"]) {
+          return $usuario;
+        }
+      }
+    return $usuario = null;
+}
+
+function armarRegistroOlvide($datos) {
+    $usuarios = abrirBaseDatos();
+    foreach ($usuarios as $key=>$usuario) {
+      if ($datos["email"] == $usuario["email"]) {
+          $usuario["password"] = password_hash($datos["password"],PASSWORD_DEFAULT);
+            $usuarios[$key] = $usuario;
+        }
+        $usuarios[$key] = $usuario;
+    }
+    //Esto se los coloque para que sepan que con esta función podemos borrar un archivo
+    unlink("usuarios.json");
+    foreach ($usuarios as $usuario) {
+        $jsusuario = json_encode($usuario);
+        file_put_contents('usuarios.json', $jsusuario. PHP_EOL,FILE_APPEND);
+    }
+}
 
 function crearSesion($usuario, $datos) {
   $_SESSION["nombre"] = $usuario["nombre"];

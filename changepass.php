@@ -8,14 +8,9 @@ if (isset($_SESSION["nombre"])) {
   if ($_POST) {
     $errores = validar($_POST);
     if (count($errores) == 0) {
-      $usuario = buscarNombreEmail($_POST["email-recover"], $_POST["nombre-recover"]);
-      if($usuario == null) {
-        $errores["email"] = "Los datos no corresponden a ningún usuario registrado";
-      } else {
-        $_SESSION["email"] = $_POST["email-recover"];
-        header("Location: changepass.php");
-        exit;
-      }
+      $registro = armarRegistroOlvide($_POST);
+      header("Location: login.php");
+      exit;
     }
   }
 }
@@ -28,7 +23,7 @@ if (isset($_SESSION["nombre"])) {
     <?php
     include_once('head.php');
     ?>
-  <title>Reestablecer Contraseña</title>
+  <title>Cambiar Contraseña</title>
   </head>
   <body>
     <?php include_once('nav.php');
@@ -51,15 +46,17 @@ if (isset($_SESSION["nombre"])) {
         </ul>
         <br>
         <?php endif;?>
-        <label for="nombre-recover" class="etiquetas"><b>NOMBRE</b></label>
-        <input class="completar" type="text" placeholder="Ingrese su nombre" name="nombre-recover" value="" required>
+        <label for="email" class="etiquetas"><b>EMAIL (Será su usuario)</b></label>
+        <input class="completar" name="email" type="email" id="email" placeholder="Ingrese su email" value="<?=($_SESSION["email"]); session_destroy();?>" readonly/>
         <br>
-        <label for="email-recover" class="etiquetas"><b>EMAIL</b></label>
-        <input class="completar" type="email" placeholder="Ingrese su email" name="email-recover" value="" required>
+        <label for="password" class="etiquetas"><b>NUEVA CONTRASEÑA</b></label>
+        <input class="completar" name="password" type="password" id="password" placeholder="Ingrese una contraseña" value="" required/>
+        <label for="repassword" class="etiquetas"><b>CONFIRMAR NUEVA CONTRASEÑA</b></label>
+        <input class="completar" name="repassword" type="password" id="repassword" placeholder="Confirme contraseña" value="" required/>
         <br>
         <br>
-        <button type="submit" class="btn btn-info hsubmit" data-toggle="modal" data-target="#myModal" aria-disabled="true" autocomplete="off">Reestablecer</button>
-        <a href="login.php"><button type="button" class="btn btn-info hcancel" data-toggle="modal" data-target="#myModal" aria-disabled="true" autocomplete="on">Cancelar</button></a>
+        <button type="submit" class="btn btn-info hsubmit" data-toggle="modal" data-target="#myModal" aria-disabled="true" autocomplete="off">Establecer</button>
+        <a class="signUp" href="login.php">Cancelar</a>
         <br>
         <br>
         <br>

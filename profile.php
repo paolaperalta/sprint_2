@@ -1,5 +1,9 @@
 <?php
 include_once("controllers/funciones.php");
+
+if (!isset($_SESSION["nombre"])) {
+  header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>

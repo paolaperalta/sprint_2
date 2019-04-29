@@ -1,7 +1,7 @@
 <?php
 include_once("controllers/funciones.php");
 
-if ($_SESSION) {
+if (isset($_SESSION["nombre"])) {
   header("Location: index.php");
 } else {
   if ($_POST) {
@@ -39,7 +39,7 @@ if ($_SESSION) {
     </div>
     <!--<section class="section-t4">-->
           <br>
-          <form action="" class="signup" method="POST" enctype="multipart/form-data">
+          <form action="" class="" method="POST" enctype="multipart/form-data">
             <?php
             if(isset($errores)):?>
             <ul class="alert alert-danger halert">

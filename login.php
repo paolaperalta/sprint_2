@@ -1,8 +1,9 @@
 <?php
 include_once("controllers/funciones.php");
 
-if ($_SESSION) {
+if (isset($_SESSION["nombre"])) {
   header("Location: index.php");
+  exit;
 } else {
   if ($_POST) {
     $errores = validar($_POST);
@@ -50,10 +51,10 @@ if ($_SESSION) {
       <form class="" action="" method="POST">
         <?php
         if(isset($errores)):?>
-        <ul class="alert alert-danger">
+        <ul class="alert alert-danger halert">
         <?php
         foreach ($errores as $key => $value) :?>
-        <li> <?=$value;?> </li>
+        <li class="etiqueta"> <?=$value;?> </li>
         <?php endforeach;?>
         </ul>
         <br>
