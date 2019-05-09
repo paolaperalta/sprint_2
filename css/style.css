@@ -2039,89 +2039,414 @@ footer .credits {
   width:100%;
 }
 
-.titulo-faqs, .titulo-login{
+.titulo-faqs{
   margin-top: 7rem;
   text-align: center;
 }
 
 
 /*-------- PAO ----------*/
+/* Mobile First - for Phone only */
+@media (max-width: 599px) {
 
-.btn{
+   .container .row .titulo-login{
+   margin-top: 100px;
+   padding-left: 12px;
+   align: center;
+  }
+
+  /*botón login*/
+  .btn-info {
+    text-align: center;
+    line-height: 30px;
+    width:75vw;
+    background-color: #E2D4C9;
+  }
+
+  .form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  /*eqiquetas del form*/
+  .etiquetas{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  font-weight: 1;
+  color: #01886A;
+  padding-top: 2px;
   width: 100%;
-  background-color: #E2D4C9;
+  }
+
+  .completar{
+    font-family:'Quicksand', sans-serif;
+    width: 100%;
+    height: 3em;
+  }
+
+/*Olvidaste tu contraseña*/
+  .recover{
+    padding-top: 10px;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    font-size-adjust: auto;
+  }
+
+/*Usuario nuevo? creá una cuenta*/
+  .usuarioNuevo{
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+  }
+
+/*switch recordarme*/
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .recordar{
+      size:20px;
+
+    }
+
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
 }
 
-.etiquetas{
-font-family: 'Lato', sans-serif;
-font-size: 1.2em;
-font-weight: 1;
-color: #01886A;
-padding-top: 2px;
-width: 100%;
+
+/*tablet-portrait up*/
+@media (min-width: 600px) {
+  .container .row .titulo-login{
+  margin-top: 80px;
+  padding-left: 10px;
+  align: center;
+  }
+
+    .btn-info {
+    text-align: center;
+    line-height: 30px;
+    width:65vw;
+    background-color: #E2D4C9;
+  }
+    /*eqiquetas del form*/
+    .etiquetas{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    font-weight: 1;
+    color: #01886A;
+    padding-top: 2px;
+    width: 100%;
+  }
+
+ .form-actions {
+   margin: 0;
+   background-color: transparent;
+   text-align: center;
+ }
+
+ .completar{
+   font-family:'Quicksand', sans-serif;
+   width: 100%;
+   height: 3em;
+ }
+
+/*Olvidaste tu contraseña*/
+ .recover{
+   padding-top: 10px;
+   display:flex;
+   flex-direction:row;
+   justify-content: flex-end;
+   font-size-adjust: auto;
+ }
+
+/*Usuario nuevo? creá una cuenta*/
+ .usuarioNuevo{
+   margin: 0;
+   background-color: transparent;
+   text-align: center;
+ }
+
+/*switch recordarme*/
+   .switch {
+     position: relative;
+     display: inline-block;
+     width: 50px;
+     height: 24px;
+   }
+
+   .recordar{
+     size:20px;
+
+   }
+
+
+   .switch input {
+     opacity: 0;
+     width: 0;
+     height: 0;
+   }
+
+   /* slider */
+   .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #ccc;
+     -webkit-transition: .4s;
+     transition: .4s;
+   }
+
+   .slider:before {
+     position: absolute;
+     content: "";
+     height: 16px;
+     width: 16px;
+     left: 4px;
+     bottom: 4px;
+     background-color: white;
+     -webkit-transition: .4s;
+     transition: .4s;
+   }
+
+   input:checked + .slider {
+     background-color: #2196F3;
+   }
+
+   input:focus + .slider {
+     box-shadow: 0 0 1px #2196F3;
+   }
+
+   input:checked + .slider:before {
+     -webkit-transform: translateX(26px);
+     -ms-transform: translateX(26px);
+     transform: translateX(26px);
+   }
+
+   /* Rounded sliders */
+   .slider.round {
+     border-radius: 34px;
+   }
+
+   .slider.round:before {
+     border-radius: 50%;
+   }
+
+
 
 }
 
-.completar{
-  font-family:'Quicksand', sans-serif;
-  width: 100%;
-  height: 3em;
-}
+/*tablet-landscape up*/
+@media (min-width: 900px) {
 
-.olvidaste{
-  padding-top: 10px;
-  display:flex;
-  flex-direction:row;
-  justify-content: center;
-  font-size: 1em;
-}
+/*desktop up*/
+@media (min-width: 1200px) {
 
-.btn-block{
-  display: flex;
 
 }
 
-.recordar{
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  font-size: 1em;
+/*for-big-desktop-up*/
+  @media (min-width: 1800px) {
 
-}
+  .container .row .titulo-login{
+  margin-top: 100px;
+  padding-left: 10px;
+  align: center;
+  }
 
-.signUp{
-  display: flex;
-  flex-direction:row;
-  justify-content:center;
-  font-size: 1em;
-  line-height: 4em;
-}
+  /*Olvidaste tu contraseña*/
+    .recover{
+      padding-top: 10px;
+      display:flex;
+      flex-direction:row;
+      justify-content: flex-end;
+      font-size-adjust:70px;
+    }
 
-.recover{
-  display: flex;
-  flex-direction:row;
-  justify-content:center;
-  font-size: 1em;
-}
+  .btn-info {
+    text-align: center;
+    line-height: 30px;
+    width:25vw;
+    background-color: #E2D4C9;
+  }
 
-/*tablets*/
-@media only screen and (min-width: 600px) {
+  .form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+  }
 
   .etiquetas{
-    padding: 15px 0px 0px 0px;
-    align-self:flex-start;
-    font-size: 1.2em;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  font-weight: 1;
+  color: #01886A;
+  padding-top: 2px;
+  width: 100%;
+
   }
-  .btn{
-    width:100%;
+
+  .completar{
+    font-family:'Quicksand', sans-serif;
+    width: 100%;
+    height: 3em;
   }
-  .recordar{
-    padding: 10px 50px 30px 50px;
-    font-size: 0.9em;
+
+  .olvidaste{
+    padding-top: 10px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    font-size: 1em;
+  }
+
+  .usuarioNuevo{
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+  /*  display: flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    font-size: 1em;
+    line-height: 4em;
+    */
+  }
+
+
+  .recover{
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    font-size: 1em;
+  }
+
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
   }
 
 }
 
+
+
+
+/*-------- Herni ----------*/
 .halert{
   list-style-type: none;
   text-align: center;

@@ -41,9 +41,11 @@ if ($_SESSION) {
   <body>
     <?php include_once('nav.php');
     ?>
+
+
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 offset-4 titulo-login">
+        <div class= titulo-login>
           <h2>INICIAR SESIÓN</h2>
         </div>
       </div>
@@ -65,14 +67,28 @@ if ($_SESSION) {
         <label for="password" class="etiquetas"><b>CONTRASEÑA</b></label>
         <input class="completar" type="password" placeholder="Ingrese su contraseña" name="password" id="password" value="" required>
         <br>
-        <br>
-        <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#myModal" aria-disabled="true" autocomplete="off">Iniciar sesión
-        </button>
-        <br>
-        <a class="signUp" href="signup.php">¿Usuario nuevo? Creá una cuenta</a>
-        <input type="checkbox" name="remember" class="recordar" style="margin:0px 3px 0px 0px">Recordarme
-        <br>
         <a class="recover" href="recover.php">¿Olvidaste tu contraseña?</a>
+        <br>
+        <label class="switch">
+        <input type = "checkbox">
+        <span class="slider round"  name="remember" class="recordar">
+        </span>
+        </label>
+          <span class="on">Recordarme</span>
+          <span class="off"></span>
+          </div>
+        </div>
+          </label>
+        <br>
+        <div class="form-actions">
+        <button type="submit" class="btn btn-info">ENTRAR
+        </button>
+        </div>
+        <br>
+        <div class="usuarioNuevo">
+        <a class="signUp" href="signup.php">¿Usuario nuevo? Creá una cuenta</a>
+        </div>
+        <br>
         <br>
         <br>
         <br>
