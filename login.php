@@ -16,6 +16,7 @@ if (isset($_SESSION["nombre"])) {
           $errores["password"] = "Los datos ingresados son incorrectos";
         } else {
           crearSesion($usuario, $_POST);
+          
           if (validarUsuario()) {
             header("Location: index.php");
             exit;
